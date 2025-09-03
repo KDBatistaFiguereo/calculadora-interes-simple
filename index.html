@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="text-center">
+      <h1>Calculadoras de interés simple</h1>
+      <p>Diferentes calculadoras para calcular diversos aspectos del interés</p>
+    </header>
+
+    <main class="grid grid-cols-2">
+      <div id="monto">
+        <header class="flex items-center justify-center">
+          <span class="mr-2">
+            <i class="fa-solid fa-money-bill"></i>
+          </span>
+          <h2 class="item-center">Monto</h2>
+        </header>
+
+        <div>
+          <form action="">
+            <div>
+              <label for="capital">Capital</label>
+              <input
+                type="number"
+                name="capital"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+              />
+            </div>
+
+            <div>
+              <label for="interes">Interés</label>
+              <input
+                type="number"
+                name="interes"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+              />
+              <select name="periodo" id="periodo">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="semestral">Semestral</option>
+                <option value="anual">Anual</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="tiempo">Tiempo</label>
+              <input
+                type="number"
+                name="tiempo"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+              />
+            </div>
+
+            <div>
+              <output name="resultado" for="tiempo interes capital">0.0</output>
+              <input type="submit" value="calcular" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="capital">
+        <header class="flex items-center justify-center">
+          <span class="mr-2">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </span>
+          <h2>Capital</h2>
+        </header>
+
+        <div>
+          <form action="">
+            <div>
+              <label for="monto">Monto</label>
+              <input
+                type="number"
+                name="monto"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+              />
+            </div>
+
+            <div>
+              <label for="interes">Interés</label>
+              <input
+                type="number"
+                name="interes"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+              />
+              <select name="periodo" id="periodo">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="semestral">Semestral</option>
+                <option value="anual">Anual</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="tiempo">Tiempo</label>
+              <input
+                type="number"
+                name="tiempo"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+              />
+            </div>
+
+            <div>
+              <output name="resultado" for="tiempo interes monto">0.0</output>
+              <input type="submit" value="calcular" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="interes">
+        <header class="flex items-center justify-center">
+          <span class="mr-2">
+            <i class="fas fa-comments-dollar"></i>
+          </span>
+          <h2>Interes</h2>
+        </header>
+        <div>
+          <form action="">
+            <div>
+              <label for="monto">Monto</label>
+              <input
+                type="number"
+                name="monto"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+              />
+            </div>
+            <label for="capital">Capital</label>
+            <input
+              type="number"
+              name="capital"
+              onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+            />
+            <div>
+              <label for="tiempo">Tiempo</label>
+              <input
+                type="number"
+                name="tiempo"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+              />
+            </div>
+
+            <div>
+              <output name="resultado" for="tiempo capital monto">0.0</output>
+              <input type="submit" value="calcular" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="tiempo">
+        <header class="flex items-center justify-center">
+          <span class="mr-2">
+            <i class="fa-solid fa-clock"></i>
+          </span>
+          <h2>Tiempo</h2>
+        </header>
+        <div>
+          <form action="">
+            <div>
+              <label for="monto">Monto</label>
+              <input
+                type="number"
+                name="monto"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+              />
+            </div>
+
+            <div>
+              <label for="interes">Interés</label>
+              <input
+                type="number"
+                name="interes"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+              />
+              <select name="periodo" id="periodo">
+                <option value="diario">Diario</option>
+                <option value="semanal">Semanal</option>
+                <option value="mensual">Mensual</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="semestral">Semestral</option>
+                <option value="anual">Anual</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="capital">Capital</label>
+              <input
+                type="number"
+                name="capital"
+                onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+              />
+            </div>
+
+            <div>
+              <output name="resultado" for="capital interes monto">0.0</output>
+              <input type="submit" value="calcular" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
