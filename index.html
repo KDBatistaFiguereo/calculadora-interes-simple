@@ -1,3 +1,4 @@
+<!DOCTYPE ="html">
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +25,6 @@
           Diferentes calculadoras para calcular diversos aspectos del interés
         </p>
       </div>
-
       <img
         src="./images/business-and-finance-vector-icon.jpg"
         alt="finanzas"
@@ -118,23 +118,33 @@
         <div>
           <form action="">
             <div class="mb-4">
-              <label for="capital-monto">Monto</label>
+              <label for="capital-monto" class="block text-gray-700"
+                >Monto:</label
+              >
               <input
                 type="number"
                 id="capital-monto"
                 name="monto"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
               />
             </div>
             <div class="mb-4">
-              <label for="capital-interes">Interés</label>
+              <label for="capital-interes" class="block text-gray-700"
+                >Interés:</label
+              >
               <input
                 type="number"
                 id="capital-interes"
                 name="interes"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
               />
-              <select name="periodo" id="capital-periodo">
+              <select
+                name="periodo"
+                id="capital-periodo"
+                class="block mt-2 w-full border rounded p-2"
+              >
                 <option value="diario">Diario</option>
                 <option value="semanal">Semanal</option>
                 <option value="mensual">Mensual</option>
@@ -144,22 +154,30 @@
               </select>
             </div>
             <div class="mb-4">
-              <label for="capital-tiempo">Tiempo</label>
+              <label for="capital-tiempo" class="block text-gray-700"
+                >Tiempo:</label
+              >
               <input
                 type="number"
                 id="capital-tiempo"
                 name="tiempo"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
               />
             </div>
             <div class="mt-4">
+              <input
+                type="submit"
+                value="Calcular"
+                class="rounded-lg text-lg font-bold text-white mb-4 bg-blue-500 border-blue-700 border-2 p-2 block w-full"
+              />
               <output
                 id="resultado-capital"
                 name="resultado"
                 for="tiempo interes monto"
+                class="mt-3 text-lg font-semibold text-gray-800"
                 >0.0</output
               >
-              <input type="submit" value="calcular" />
             </div>
           </form>
         </div>
@@ -175,35 +193,50 @@
         <div>
           <form action="">
             <div class="mb-4">
-              <label for="interes-monto">Monto</label>
+              <label for="interes-monto" class="block text-gray-700"
+                >Monto:</label
+              >
               <input
                 type="number"
                 id="interes-monto"
                 name="monto"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
               />
             </div>
             <div class="mb-4">
-              <label for="interes-capital">Capital</label>
+              <label for="interes-capital" class="block text-gray-700"
+                >Capital:</label
+              >
               <input
                 type="number"
                 id="interes-capital"
                 name="capital"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
               />
             </div>
             <div class="mb-4">
-              <label for="interes-tiempo">Tiempo</label>
+              <label for="interes-tiempo" class="block text-gray-700"
+                >Tiempo:</label
+              >
               <input
                 type="number"
                 id="interes-tiempo"
                 name="tiempo"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
               />
             </div>
             <div class="mb-4">
-              <label for="interes-periodo">Período</label>
-              <select name="periodo" id="interes-periodo">
+              <label for="interes-periodo" class="block text-gray-700"
+                >Período:</label
+              >
+              <select
+                name="periodo"
+                id="interes-periodo"
+                class="block mt-2 w-full border rounded p-2"
+              >
                 <option value="diario">Diario</option>
                 <option value="semanal">Semanal</option>
                 <option value="mensual">Mensual</option>
@@ -213,13 +246,18 @@
               </select>
             </div>
             <div class="mt-4">
+              <input
+                type="submit"
+                value="Calcular"
+                class="rounded-lg text-lg font-bold text-white mb-4 bg-blue-500 border-blue-700 border-2 p-2 block w-full"
+              />
               <output
                 id="resultado-interes"
                 name="resultado"
                 for="tiempo capital monto"
+                class="mt-3 text-lg font-semibold text-gray-800"
                 >0.0</output
               >
-              <input type="submit" value="calcular" />
             </div>
           </form>
         </div>
@@ -235,23 +273,33 @@
         <div>
           <form action="">
             <div class="mb-4">
-              <label for="tiempo-monto">Monto</label>
+              <label for="tiempo-monto" class="block text-gray-700"
+                >Monto:</label
+              >
               <input
                 type="number"
                 id="tiempo-monto"
                 name="monto"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
               />
             </div>
             <div class="mb-4">
-              <label for="tiempo-interes">Interés</label>
+              <label for="tiempo-interes" class="block text-gray-700"
+                >Interés:</label
+              >
               <input
                 type="number"
                 id="tiempo-interes"
                 name="interes"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
               />
-              <select name="periodo" id="tiempo-periodo">
+              <select
+                name="periodo"
+                id="tiempo-periodo"
+                class="block mt-2 w-full border rounded p-2"
+              >
                 <option value="diario">Diario</option>
                 <option value="semanal">Semanal</option>
                 <option value="mensual">Mensual</option>
@@ -261,22 +309,30 @@
               </select>
             </div>
             <div class="mb-4">
-              <label for="tiempo-capital">Capital</label>
+              <label for="tiempo-capital" class="block text-gray-700"
+                >Capital:</label
+              >
               <input
                 type="number"
                 id="tiempo-capital"
                 name="capital"
+                class="w-full border rounded p-2"
                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
               />
             </div>
             <div class="mt-4">
+              <input
+                type="submit"
+                value="Calcular"
+                class="rounded-lg text-lg font-bold text-white mb-4 bg-blue-500 border-blue-700 border-2 p-2 block w-full"
+              />
               <output
                 id="resultado-tiempo"
                 name="resultado"
                 for="capital interes monto"
+                class="mt-3 text-lg font-semibold text-gray-800"
                 >0.0</output
               >
-              <input type="submit" value="calcular" />
             </div>
           </form>
         </div>
@@ -285,3 +341,4 @@
     <script src="js/calculadora.js"></script>
   </body>
 </html>
+
